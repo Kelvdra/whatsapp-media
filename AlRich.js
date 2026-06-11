@@ -1,4 +1,4 @@
-> await conn.relayMessage(m.chat, {
+ await conn.relayMessage(m.chat, {
     messageContextInfo: {
         deviceListMetadata: {},
         deviceListMetadataVersion: 2,
