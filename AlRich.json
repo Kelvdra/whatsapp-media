@@ -1,0 +1,128 @@
+> await conn.relayMessage(m.chat, {
+    messageContextInfo: {
+        deviceListMetadata: {},
+        deviceListMetadataVersion: 2,
+        botMetadata: {
+            messageDisclaimerText: "Gweh",
+            richResponseSourcesMetadata: {
+                sources: [
+                    {
+                        provider: "NIXEL",
+                        thumbnailCDNURL: "https://cdn.ornzora.eu.cc/d6b36500-3b7e-49ee-9123-52bb1bf106be-FIORA.jpg",
+                        sourceProviderURL: "https://fiora.nixel.my.id/",
+                        sourceQuery: "",
+                        faviconCDNURL: "https://cdn.ornzora.eu.cc/4d2905ce-3707-4ec0-998a-68a3d851629f-FIORA.jpg",
+                        citationNumber: 1,
+                        sourceTitle: "Nixel"
+                    },
+                    {
+                        provider: "NIXEL",
+                        thumbnailCDNURL: "https://cdn.ornzora.eu.cc/d6b36500-3b7e-49ee-9123-52bb1bf106be-FIORA.jpg",
+                        sourceProviderURL: "https://fiora.nixel.my.id/",
+                        sourceQuery: "",
+                        faviconCDNURL: "https://cdn.ornzora.eu.cc/4d2905ce-3707-4ec0-998a-68a3d851629f-FIORA.jpg",
+                        citationNumber: 2,
+                        sourceTitle: "Nixel"
+                    }
+                ]
+            }
+        }
+    },
+    botForwardedMessage: {
+        message: {
+            richResponseMessage: {
+                messageType: 1,
+                submessages: [
+                    {
+                        messageType: 2,
+                        messageText: ""
+                    },
+                    {
+                        messageType: 5,
+                        codeMetadata: {
+                            codeLanguage: "javascript",
+                            codeBlocks: [
+                                { codeContent: "class", highlightType: 1 },
+                                { codeContent: " Nixel {\n\t", highlightType: 0 },
+                                { codeContent: "static", highlightType: 1 },
+                                { codeContent: " ", highlightType: 0 },
+                                { codeContent: "hello", highlightType: 2 },
+                                { codeContent: "() {\n\t\t", highlightType: 0 },
+                                { codeContent: "return", highlightType: 1 },
+                                { codeContent: " ", highlightType: 0 },
+                                { codeContent: "'Hello World'", highlightType: 3 },
+                                { codeContent: ";\n\t}\n}", highlightType: 0 }
+                            ]
+                        }
+                    },
+                    {
+                        messageType: 4,
+                        tableMetadata: {
+                            title: "",
+                            rows: [
+                                { items: ["Nama", "Role"], isHeading: true },
+                                { items: ["Nixel", "Developer"] },
+                                { items: ["Fiora Sylvie", "Assistant"] }
+                            ]
+                        }
+                    },
+                    {
+                        messageType: 1,
+                        gridImageMetadata: {
+                            gridImageUrl: {
+                                imagePreviewUrl: "https://cdn.ornzora.eu.cc/d987ff9c-c16c-4f1e-a8d6-953e375f4aec-FIORA.jpg"
+                            },
+                            imageUrls: [
+                                {
+                                    imagePreviewUrl: "https://cdn.ornzora.eu.cc/d987ff9c-c16c-4f1e-a8d6-953e375f4aec-FIORA.jpg",
+                                    imageHighResUrl: "https://cdn.ornzora.eu.cc/d987ff9c-c16c-4f1e-a8d6-953e375f4aec-FIORA.jpg",
+                                    sourceUrl: "https://fiora.nixel.my.id/"
+                                },
+                                {
+                                    imagePreviewUrl: "https://cdn.ornzora.eu.cc/db9578dd-01e4-47ba-8a14-4c20e2aa4f52-FIORA.jpg",
+                                    imageHighResUrl: "https://cdn.ornzora.eu.cc/db9578dd-01e4-47ba-8a14-4c20e2aa4f52-FIORA.jpg",
+                                    sourceUrl: "https://fiora.nixel.my.id/"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        messageType: 9,
+                        contentItemsMetadata: {
+                            contentType: 1,
+                            itemsMetadata: [
+                                {
+                                    reelItem: {
+                                        title: "Nixel",
+                                        profileIconUrl: "https://cdn.ornzora.eu.cc/4d2905ce-3707-4ec0-998a-68a3d851629f-FIORA.jpg",
+                                        thumbnailUrl: "https://cdn.ornzora.eu.cc/d6b36500-3b7e-49ee-9123-52bb1bf106be-FIORA.jpg",
+                                        videoUrl: "https://fiora.nixel.my.id/"
+                                    }
+                                },
+                                {
+                                    reelItem: {
+                                        title: "Nixel",
+                                        profileIconUrl: "https://cdn.ornzora.eu.cc/4d2905ce-3707-4ec0-998a-68a3d851629f-FIORA.jpg",
+                                        thumbnailUrl: "https://cdn.ornzora.eu.cc/fb402a04-3f96-49d1-b4e2-faebbbd4a22c-FIORA.jpg",
+                                        videoUrl: "https://fiora.nixel.my.id/"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                unifiedResponse: {
+                    data: "eyJyZXNwb25zZV9pZCI6IjBhYzI5YzZhLWRlNmYtNDEzYy04NTc0LTM5YmYyZTAxNmJhOSIsInNlY3Rpb25zIjpbeyJ2aWV3X21vZGVsIjp7InByaW1pdGl2ZSI6eyJ0ZXh0IjoiXG4jIEhhbG8gRHVuaWFcbiMjIE5JWENPREVcblxuLS0tXG5cbj09eyBZZWxsb3cgVGV4dCB9PT1cblxuLS0tXG5cbkluaSBoeXBlcmxpbms6XG57e05JWEVMX0hZUEVSTElOS18wfX1Hb29nbGV7ey9OSVhFTF9IWVBFUkxJTktfMH19XG5cbkluaSBhdXRvIGNpdGF0aW9uOlxue3tOSVhFTF9DSVRBVElPTl8wfX1odHRwczovL29wZW5haS5jb217ey9OSVhFTF9DSVRBVElPTl8wfX1cblx0IiwiaW5saW5lX2VudGl0aWVzIjpbeyJrZXkiOiJOSVhFTF9IWVBFUkxJTktfMCIsIm1ldGFkYXRhIjp7ImRpc3BsYXlfbmFtZSI6Ikdvb2dsZSIsImlzX3RydXN0ZWQiOnRydWUsInVybCI6Imh0dHBzOi8vZ29vZ2xlLmNvbSIsIl9fdHlwZW5hbWUiOiJHZW5BSUlubGluZUxpbmtJdGVtIn19LHsia2V5IjoiTklYRUxfQ0lUQVRJT05fMCIsIm1ldGFkYXRhIjp7InJlZmVyZW5jZV9pZCI6MSwicmVmZXJlbmNlX3VybCI6Imh0dHBzOi8vb3BlbmFpLmNvbSIsInJlZmVyZW5jZV90aXRsZSI6Imh0dHBzOi8vb3BlbmFpLmNvbSIsInJlZmVyZW5jZV9kaXNwbGF5X25hbWUiOiJodHRwczovL29wZW5haS5jb20iLCJzb3VyY2VzIjpbXSwiX190eXBlbmFtZSI6IkdlbkFJU2VhcmNoQ2l0YXRpb25JdGVtIn19XSwiX190eXBlbmFtZSI6IkdlbkFJTWFya2Rvd25UZXh0VVhQcmltaXRpdmUifSwiX190eXBlbmFtZSI6IkdlbkFJU2luZ2xlTGF5b3V0Vmlld01vZGVsIn19LHsidmlld19tb2RlbCI6eyJwcmltaXRpdmUiOnsibGFuZ3VhZ2UiOiJqYXZhc2NyaXB0IiwiY29kZV9ibG9ja3MiOlt7ImNvbnRlbnQiOiJjbGFzcyIsInR5cGUiOiJLRVlXT1JEIn0seyJjb250ZW50IjoiIE5peGVsIHtcblx0IiwidHlwZSI6IkRFRkFVTFQifSx7ImNvbnRlbnQiOiJzdGF0aWMiLCJ0eXBlIjoiS0VZV09SRCJ9LHsiY29udGVudCI6IiAiLCJ0eXBlIjoiREVGQVVMVCJ9LHsiY29udGVudCI6ImhlbGxvIiwidHlwZSI6Ik1FVEhPRCJ9LHsiY29udGVudCI6IigpIHtcblx0XHQiLCJ0eXBlIjoiREVGQVVMVCJ9LHsiY29udGVudCI6InJldHVybiIsInR5cGUiOiJLRVlXT1JEIn0seyJjb250ZW50IjoiICIsInR5cGUiOiJERUZBVUxUIn0seyJjb250ZW50IjoiJ0hlbGxvIFdvcmxkJyIsInR5cGUiOiJTVFIifSx7ImNvbnRlbnQiOiI7XG5cdH1cbn0iLCJ0eXBlIjoiREVGQVVMVCJ9XSwiX190eXBlbmFtZSI6IkdlbkFJQ29kZVVYUHJpbWl0aXZlIn0sIl9fdHlwZW5hbWUiOiJHZW5BSVNpbmdsZUxheW91dFZpZXdNb2RlbCJ9fSx7InZpZXdfbW9kZWwiOnsicHJpbWl0aXZlIjp7InJvd3MiOlt7ImlzX2hlYWRlciI6dHJ1ZSwiY2VsbHMiOlsiTmFtYSIsIlJvbGUiXX0seyJpc19oZWFkZXIiOmZhbHNlLCJjZWxscyI6WyJOaXhlbCIsIkRldmVsb3BlciJdfSx7ImlzX2hlYWRlciI6ZmFsc2UsImNlbGxzIjpbIkZpb3JhIFN5bHZpZSIsIkFzc2lzdGFudCJdfV0sIl9fdHlwZW5hbWUiOiJHZW5BVGFibGVVWFByaW1pdGl2ZSJ9LCJfX3R5cGVuYW1lIjoiR2VuQUlTaW5nbGVMYXlvdXRWaWV3TW9kZWwifX0seyJ2aWV3X21vZGVsIjp7InByaW1pdGl2ZSI6eyJzb3VyY2VzIjpbeyJzb3VyY2VfdHlwZSI6IlRISVJEX1BBUlRZIiwic291cmNlX2Rpc3BsYXlfbmFtZSI6IkdpdEh1YiIsInNvdXJjZV9zdWJ0aXRsZSI6IkFJIiwic291cmNlX3VybCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9WYWxkYXpHVC8iLCJmYXZpY29uIjp7InVybCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9WYWxkYXpHVC8iLCJtaW1lX3R5cGUiOiJpbWFnZS9qcGVnIiwid2lkdGgiOjE2LCJoZWlnaHQiOjE2fX0seyJzb3VyY2VfdHlwZSI6IlRISVJEX1BBUlRZIiwic291cmNlX2Rpc3BsYXlfbmFtZSI6IkZpb3JhIFN5bHZpZSIsInNvdXJjZV9zdWJ0aXRsZSI6IkFJIiwic291cmNlX3VybCI6Imh0dHBzOi8vZmlvcmEubml4ZWwubXkuaWQvIiwiZmF2aWNvbiI6eyJ1cmwiOiJodHRwczovL2Zpb3JhLm5peGVsLm15LmlkLyIsIm1pbWVfdHlwZSI6ImltYWdlL2pwZWciLCJ3aWR0aCI6MTYsImhlaWdodCI6MTZ9fV0sIl9fdHlwZW5hbWUiOiJHZW5BSVNlYXJjaFJlc3VsdFByaW1pdGl2ZSJ9LCJfX3R5cGVuYW1lIjoiR2VuQUlTaW5nbGVMYXlvdXRWaWV3TW9kZWwifX0seyJ2aWV3X21vZGVsIjp7InByaW1pdGl2ZSI6eyJtZWRpYSI6eyJ1cmwiOiJodHRwczovL2Nkbi5vcm56b3JhLmV1LmNjL2Q5ODdmZjljLWMxNmMtNGYxZS1hOGQ2LTk1M2UzNzVmNGFlYy1GSU9SQS5qcGciLCJtaW1lX3R5cGUiOiJpbWFnZS9qcGVnIn0sImltYWdpbmVfdHlwZSI6Mywic3RhdHVzIjp7InN0YXR1cyI6IlJFQURZIn0sIl9fdHlwZW5hbWUiOiJHZW5BSUltYWdpbmVQcmltaXRpdmUifSwiX190eXBlbmFtZSI6IkdlbkFJU2luZ2xlTGF5b3V0Vmlld01vZGVsIn19LHsidmlld19tb2RlbCI6eyJwcmltaXRpdmUiOnsibWVkaWEiOnsidXJsIjoiaHR0cHM6Ly9jZG4ub3Juem9yYS5ldS5jYy9kYjk1NzhkZC0wMWU0LTQ3YmEtOGExNC00YzIwZTJhYTRmNTItRklPUkEuanBnIiwibWltZV90eXBlIjoiaW1hZ2UvanBlZyJ9LCJpbWFnaW5lX3R5cGUiOjMsInN0YXR1cyI6eyJzdGF0dXMiOiJSRUFEWSJ9LCJfX3R5cGVuYW1lIjoiR2VuQUlJbWFnaW5lUHJpbWl0aXZlIn0sIl9fdHlwZW5hbWUiOiJHZW5BSVNpbmdsZUxheW91dFZpZXdNb2RlbCJ9fSx7InZpZXdfbW9kZWwiOnsicHJpbWl0aXZlcyI6W3sicmVlbHNfdXJsIjoiaHR0cHM6Ly9maW9yYS5uaXhlbC5teS5pZC8iLCJ0aHVtYm5haWxfdXJsIjoiaHR0cHM6Ly9jZG4ub3Juem9yYS5ldS5jYy9kNmIzNjUwMC0zYjdlLTQ5ZWUtOTEyMy01MmJiMWJmMTA2YmUtRklPUkEuanBnIiwiY3JlYXRvciI6Ik5peGVsIiwiYXZhdGFyX3VybCI6Imh0dHBzOi8vY2RuLm9ybnpvcmEuZXUuY2MvNGQyOTA1Y2UtMzcwNy00ZWMwLTk5OGEtNjhhM2Q4NTE2MjlmLUZJT1JBLmpwZyIsInJlZWxzX3RpdGxlIjoiRGVtbyBSZWVsIiwibGlrZXNfY291bnQiOjEyMDAwLCJzaGFyZXNfY291bnQiOjUwMCwidmlld19jb3VudCI6OTk5OTk5LCJyZWVsX3NvdXJjZSI6IklHIiwiaXNfdmVyaWZpZWQiOnRydWUsIl9fdHlwZW5hbWUiOiJHZW5BSVJlZWxQcmltaXRpdmUifSx7InJlZWxzX3VybCI6Imh0dHBzOi8vZmlvcmEubml4ZWwubXkuaWQvIiwidGh1bWJuYWlsX3VybCI6Imh0dHBzOi8vY2RuLm9ybnpvcmEuZXUuY2MvZmI0MDJhMDQtM2Y5Ni00OWQxLWI0ZTItZmFlYmJiZDRhMjJjLUZJT1JBLmpwZyIsImNyZWF0b3IiOiJOaXhlbCIsImF2YXRhcl91cmwiOiJodHRwczovL2Nkbi5vcm56b3JhLmV1LmNjLzRkMjkwNWNlLTM3MDctNGVjMC05OThhLTY4YTNkODUxNjI5Zi1GSU9SQS5qcGciLCJyZWVsc190aXRsZSI6IkRlbW8gUmVlbCIsImxpa2VzX2NvdW50IjoxMjAwMCwic2hhcmVzX2NvdW50Ijo1MDAsInZpZXdfY291bnQiOjk5OTk5OSwicmVlbF9zb3VyY2UiOiJJRyIsImlzX3ZlcmlmaWVkIjp0cnVlLCJfX3R5cGVuYW1lIjoiR2VuQUlSZWVsUHJpbWl0aXZlIn1dLCJfX3R5cGVuYW1lIjoiR2VuQUlIU2Nyb2xsTGF5b3V0Vmlld01vZGVsIn19XX0="
+        },
+        contextInfo: {
+                    forwardingScore: 1,
+                    isForwarded: true,
+                    forwardedAiBotMessageInfo: {
+                        botJid: "0@bot"
+                    },
+                    forwardOrigin: 4
+                }
+            }
+        }
+    }
+}, {});
