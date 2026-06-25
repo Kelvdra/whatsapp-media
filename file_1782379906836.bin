@@ -1,0 +1,1431 @@
+/*
+════════════════════════════════════
+  ├ Weem Gweh Jier
+  ├ WhatsApp: wa.me/6281266950382
+  ├ Jangan Perjual Belikan Esce Ini!  
+  ├ This code created full By © JuulDev' 🌐
+  ├ Sumber Code https://whatsapp.com/channel/0029Vac0DjG6xCSJT0HTV61w
+═════════════════════════════════════
+*/
+
+import moment from 'moment-timezone'
+import PhoneNumber from 'awesome-phonenumber'
+import { xpRange } from '../lib/levelling.js'
+import fs from 'fs'
+import fetch from 'node-fetch'
+import axios from 'axios';
+import sharp from 'sharp';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import os from 'os'
+let {
+    proto,
+    prepareWAMessageMedia,
+    generateWAMessageFromContent
+} = (await import('@adiwajshing/baileys')).default
+
+let handler = async (m, { conn, usedPrefix, command, args }) => {
+  await conn.sendMessage(m.chat, {
+  react: {
+    text: `⏱️`,
+    key: m.key
+  } 
+});
+  let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.fromMe ? conn.user.jid : m.sender;
+      let premiumTime = global.db.data.users[m.sender].premiumTime
+    let prem = global.db.data.users[m.sender].premium
+    let user = global.db.data.users[m.sender]                      
+    if (new Date() - user.premiumTime > 0) {
+            user.premiumTime = 0
+            user.premium = false
+        }
+let fitur = Object.values(plugins).filter(v => v.help && !v.disabled).map(v => v.help).flat(1)
+let totalf = Object.values(global.plugins).filter(
+    (v) => v.help && v.tags
+  ).length
+      let d = new Date(new Date + 3600000)
+    let _muptime
+    if (process.send) {
+      process.send('uptime')
+      _muptime = await new Promise(resolve => {
+        process.once('message', resolve)
+        setTimeout(resolve, 1000)
+      }) * 1000
+    }
+
+    let _uptime
+    if (process.send) {
+      process.send('uptime')
+      _uptime = await new Promise(resolve => {
+        process.once('message', resolve)
+        setTimeout(resolve, 1000)
+      }) * 1000
+    }
+    let totalreg = Object.keys(global.db.data.users).length
+    let platform = os.platform()
+    let muptime = clockString(_muptime)
+    let uptime = clockString(_uptime)
+        let locale = 'id'
+    // d.getTimeZoneOffset()
+    // Offset -420 is 18.00
+    // Offset    0 is  0.00
+    // Offset  420 is  7.00
+    let date = d.toLocaleDateString(locale, {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+      timeZone: 'Asia/Jakarta'
+    })
+    let limit = user.premiumTime >= 1 ? 'Unlimited' : user.limit    
+
+  const cmd = args[0] || 'list';
+    let thumbnail = 'https://telegra.ph/file/bf29252842366db5ae047.jpg'
+
+  let type = (args[0] || '').toLowerCase()
+  let _menu = global.db.data.settings[conn.user.jid]
+    let week = d.toLocaleDateString(locale, { weekday: 'long' })
+  const tagCount = {};
+  const tagHelpMapping = {};
+  Object.keys(global.plugins)
+    .filter(plugin => !plugin.disabled)
+    .forEach(plugin => {
+      const tagsArray = Array.isArray(global.plugins[plugin].tags)
+        ? global.plugins[plugin].tags
+        : [];
+
+      if (tagsArray.length > 0) {
+        const helpArray = Array.isArray(global.plugins[plugin].help)
+          ? global.plugins[plugin].help
+          : [global.plugins[plugin].help];
+
+        tagsArray.forEach(tag => {
+          if (tag) {
+            if (tagCount[tag]) {
+              tagCount[tag]++;
+              tagHelpMapping[tag].push(...helpArray);
+            } else {
+              tagCount[tag] = 1;
+              tagHelpMapping[tag] = [...helpArray];
+            }
+          }
+        });
+      }
+    });
+    let p = pickRandom([' -', '│・', '│  ◦ ']);
+  async function generateDisplay() {
+  const countdowns = await displayCountdowns();
+  const formattedCountdowns = countdowns
+    .split("\n")
+    .map(line => `${p} ${line}`)
+    .join("\n");
+  return `
+┌───🌟 *HITUNG MUNDUR* ───
+${formattedCountdowns}
+└─────────────────
+`;
+};
+  let objek = Object.values(db.data.stats).map(v => v.success)
+  let totalHit = 0
+   for (let b of objek) {
+    totalHit += b
+    }
+  let docUrl = 'https://telegra.ph/file/bf29252842366db5ae047.jpg'
+  let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
+    return {
+      help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
+      tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
+      prefix: 'customPrefix' in plugin,
+      limit: plugin.limit,
+      premium: plugin.premium,
+      enabled: !plugin.disabled,
+    }
+  });
+
+    const ramInGB = os.totalmem() / (1024 * 1024 * 1024);
+    const freeRamInGB = os.freemem() / (1024 * 1024 * 1024);
+   let data = db.data.users[m.sender];
+   let tUser = Object.keys(db.data.users).length;
+   let userReg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+   let money = data.money
+   let exp = data.exp
+   let role = data.role
+   let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
+
+          let quick = [
+{
+  name: "galaxy_message",
+  buttonParamsJson: JSON.stringify({
+    flow_action: "navigate",
+    flow_action_payload: {
+      screen: "Hi i'm Jul Dev",
+    },
+    flow_cta: wm,
+    flow_id: "Galaxy_id",
+    flow_message_version: "9",
+    flow_token: "198028639",
+  }),
+}
+]
+
+let btn = [];
+let objekk = Object.keys(tagCount).sort();
+
+for (let pus of objekk) {
+  btn.push({
+    header: `${kyZ()} Meɴᴜ [ ${pus.toUpperCase()} ]`,
+    title: await style(`🌠 lihat menu ${pus.toLowerCase()} 🪐`, 1), 
+    description: await style(`🚀Menampilkan ${pus} menu🚀`, 1), 
+    id: ".menu " + pus,
+  });
+}
+
+const datas = {
+  title: `[furina - Powered Menu]`,
+  sections: [
+    {
+      title: "[⚡ Powered By Jul ]",
+      rows: [
+        {
+          header: `Menu [ ALL ]`,
+          title: await style("🌠 View all features🌠", 1), 
+          description: await style("🚀 menampilkan semua fitur furina - Ai🌠", 1), 
+          id: ".menu all",
+        },
+      ],
+    },
+    {
+      title: "🚀 Menu - List 🚀", 
+      highlight_label: "🌟 Menu Populer🌙",
+      rows: [...btn],
+        },
+        {
+            title: '💻info owner',
+            highlight_label: "👤 owner furina",
+            rows: [
+            {
+                    header: "👤Info ownerr",
+                    title: "🔎Informasi mengenai owner bot",
+                    description: "owner",
+                    id: ".owner",
+                  }],
+        },
+        {
+            title: '👏 ᴀᴘᴘʀᴇᴄɪᴀᴛɪᴏɴ',
+            highlight_label: `🌠 apresiasi ${namebot}`,
+            rows: [
+            {
+                    header: "👏 ᴀᴘᴘʀᴇᴄɪᴀᴛɪᴏɴ",
+                    title: "🌐 apresiasi saya",
+                    description: "🌃 kalian bisa mengapresiasi saya agar lebih semangat",
+                    id: ".apresiasi",
+                  }],
+        },
+        {
+            title: '📍 info ping',
+            highlight_label: `ping ${namebot}⚡`,
+            rows: [
+            {
+                    header: "📜info ping",
+                    title: "🔎Informasi mengenai ping furina - Ai",
+                    description: "ping",
+                    id: ".ping",
+                  }],
+        },
+        {
+            title: '📮 Sewa furina Ai',
+            highlight_label: "silahkan sewa saya🪐",
+            rows: [
+            {
+                    header: "💸 Sewa furina - Ai",
+                    title: "🔎Informasi mengenai sewa furina - Ai",
+                    description: "Sewa furina📜",
+                    id: ".sewa",
+                  }
+                  ],
+    },
+  ],
+};
+
+let jul = [
+      {
+        buttonId: `gada`,
+        buttonText: {
+          displayText: "🔍 Hasil Lain"
+        },
+        nativeFlowInfo: {
+          name: "single_select",
+          paramsJson: JSON.stringify(datas)
+        }
+      },
+      {
+        buttonId: `.rules `,
+        buttonText: {
+          displayText: "[ 🗒️ ʀᴜʟᴇs ]"
+        }
+      },
+      {
+        buttonId: `.sc `,
+        buttonText: {
+          displayText: "[ 💲 sᴄʀɪᴘᴛ ]"
+        }
+      }
+];
+
+let jul2 = [
+      {
+        buttonId: `gada`,
+        buttonText: {
+          displayText: "🔍 Hasil Lain"
+        },
+        nativeFlowInfo: {
+          name: "single_select",
+          paramsJson: JSON.stringify(datas)
+        }
+      },
+      {
+        buttonId: `.rules `,
+        buttonText: {
+          displayText: "[ 🗒️ ʀᴜʟᴇs ]"
+        }
+      },
+      {
+        buttonId: `.info `,
+        buttonText: {
+          displayText: "[❗ information ]"
+        }
+      },
+      {
+        buttonId: `.sc `,
+        buttonText: {
+          displayText: "[ 💲 sᴄʀɪᴘᴛ ]"
+        }
+      }
+];
+
+
+let isiMenu = [];
+for (let mnu of objekk) {
+  isiMenu.push(`${p} ${usedPrefix}menu ${mnu.toLowerCase()}`);
+} 
+
+let info = await style(`
+╔═━━━[ 🌙 *ɪɴғᴏ ᴘᴇɴɢɢᴜɴᴀ* ]━━═╗
+║ 🆔 *Nama*       : ${user.name || m.pushName || "unknown"}
+║ 🎂 *Umur*       : ${user.age || "unknown"}
+║ 🏷️ *Tag*        : @${m.sender.split("@")[0]}
+║ 📌 *Terdaftar*  : ${user.registered ? "✅ Ya" : "❌ Tidak"}
+║ ⚡ *Exp*         : ${exp}
+║ 🧭 *Limit*       : ${limit}
+║ 💰 *Saldo*       : ${money}
+║ 🎖️ *Role*        : ${role}
+║ 🛡️ *Status*      : ${
+  who.split`@`[0] == global.nomorwa
+    ? "👑 Developer"
+    : user.premiumTime >= 1
+    ? "💎 Premium"
+    : user.level >= 1000
+    ? "🧙 Mastah"
+    : "🎒 Pemula"
+}
+╚═━━━━━━━━━━━━━━━━━━━━━═╝`, 1);
+
+let headers = await style(`
+╔═━━═[ 🌟 *furina SYSTEM ONLINE* ]═━━═╗
+║ *Assalamu'alaikum*, ${user.name || m.pushName}!
+║ 🔹 Selamat datang di ✨ *furina AI* ✨
+║ 🔸 Bot siap membantu segala aktivitasmu!
+╚═━━━━━━━━━━━━━━━━━━━━━━━━━━━━═╝
+
+${readmore}${info}
+
+╔═⟪ ⚙️ *INFO BOT* ⟫═╗
+║ 🤖 *Nama Bot*   : ${namebot}
+║ 👤 *Pemilik*     : ${nameown}
+║ 🔐 *Mode*        : ${global.opts['self'] ? '🔒 Private' : settings.self ? '🔒 Private' : global.opts['gconly'] ? '👥 Grup Only' : '🌐 Publik'}
+║ 💻 *Platform*    : ${platform}
+║ 🧪 *Versi*       : ${version}
+║ 🌀 *Prefix*      : ${usedPrefix}
+╚═━━━━━━━━━━━━━━━━━═╝
+
+╔═⟪ 📊 *DASHBOARD* ⟫═╗
+║ 👥 *Total User*   : ${totalreg}
+║ 🗓️ *Tanggal*      : ${botdate}
+║ 🕌 *Hijriyah*     : ${dateislamic}
+║ ⏰ *Waktu*        : ${time} WIB
+║ 🔁 *Runtime*      : ${muptime}
+║ 🧩 *Fitur Aktif*  : ${fitur.length}
+║ 🧠 *Memori*       : ${freeRamInGB.toFixed(2)} GB / ${ramInGB.toFixed(2)} GB
+╚═━━━━━━━━━━━━━━━━━═╝
+`, 1);
+
+let simp = await style(`${readmore}
+╔═⟪ 🧾 *DAFTAR PERINTAH* ⟫═╗
+║ 📚 ${usedPrefix}menu
+║ 📚 ${usedPrefix}menu all
+${isiMenu.map((cmd) => `║ 🔸 ${cmd}`).join("\n")}
+╚═━━━━━━━━━━━━━━━━━━━━━═╝
+✨ *Total Kategori:* ${isiMenu.length}
+🎯 Selamat mengeksplor fitur-fitur *furina AI*!`, 1);
+
+let pp = await conn
+  .profilePictureUrl(m.sender, "image")
+  .catch((_) => "./src/avatar_contact.png");
+
+let filePath = `/tmp/profile_${Date.now()}.jpg`;
+
+let buffer;
+if (pp.startsWith("http")) {
+  const res = await fetch(pp);
+  buffer = await res.buffer();
+} else {
+  buffer = fs.readFileSync(pp);
+}
+
+fs.writeFileSync(filePath, buffer);
+let base64String = buffer.toString("base64");
+
+  if (cmd === 'list') {
+
+    const daftarTag = Object.keys(tagCount)
+      .sort()
+      .join('\n - ' + usedPrefix + command + '  ');
+    const more = String.fromCharCode(8206)
+    const readMore = more.repeat(4001)
+    let _mpt
+    if (process.send) {
+      process.send('uptime')
+      _mpt = await new Promise(resolve => {
+        process.once('message', resolve)
+        setTimeout(resolve, 1000)
+      }) * 1000
+    }
+    let mpt = clockString(_mpt)
+    let name = m.pushName || conn.getName(m.sender)
+    let list = await style(`
+-─── 「 *🌟 LST MENU 🌟* 」 ───-
+ - ${usedPrefix + command}all 🎊
+ - ${daftarTag} 🌙✨
+-─────────────────────- 
+
+> ✨ *Nikmati Menu Semua Fitur yang telah tersedia!* ✨`, 1) 
+    const allTagsAndHelp = Object.keys(tagCount).map(tag => {
+      const daftarHelp = tagHelpMapping[tag].map((helpItem, index) => {
+        const premiumSign = help[index].premium ? '🅟' : '';
+        const limitSign = help[index].limit ? 'Ⓛ' : '';
+        return `.${helpItem} ${premiumSign}${limitSign}`;
+      })
+      .sort()
+      .join('\n - ' + ' ');
+      return style(`
+-─── 「 *🌟 LST MENU 🌟* 」 ───-
+ - ${usedPrefix + command}all 🎊
+ - ${daftarTag} 🌙✨
+-─────────────────────- 
+
+> ✨ *Nikmati Menu Semua Fitur yang telah tersedia!* ✨`, 1);
+    }).join('\n');
+    let all =  `${info}${readMore}\n${allTagsAndHelp}\n${wm}`
+
+if (_menu.image) {
+conn.sendMessage(m.chat, {
+      text: list,
+      contextInfo: { mentionedJid: [m.sender], 
+            externalAdReply: {
+            title: footer, 
+            body: wm, 
+            thumbnailUrl: media.furina, 
+            renderLargerThumbnail: true, 
+            }, 
+      }}, {quoted: m})
+      
+      } else if (_menu.gif) {
+conn.sendMessage(m.chat, {
+      video: {url: "https://telegra.ph/file/ca2d038b71ff86e2c70d3.mp4"},
+      gifPlayback: true,
+      caption: list,
+      jpegThumbnail: await conn.resize((await conn.getFile(docUrl)).data, 180, 72),
+      contextInfo: { mentionedJid: [m.sender], 
+            externalAdReply: {
+            title: footer, 
+            body: wm, 
+            thumbnailUrl: media.furina, 
+            renderLargerThumbnail: true, 
+            }, 
+      }}, {quoted: m})
+
+} else if (_menu.teks) {
+conn.reply(m.chat, list, m)
+
+} else if (_menu.doc) {
+conn.sendMessage(m.chat, {
+            document: fs.readFileSync("./package.json"),
+            fileName: namebot,
+            fileLength: new Date(),
+            pageCount: "2024",
+            caption: list,
+            jpegThumbnail: await conn.resize((await conn.getFile(docUrl)).data, 180, 72),
+            contextInfo: { mentionedJid: [m.sender], 
+            externalAdReply: {
+            title: footer, 
+            body: wm, 
+            thumbnailUrl: media.furina, 
+            renderLargerThumbnail: true, 
+            }, 
+            },
+          }, {quoted: m});
+          } else if (_menu.footer) {
+
+  let capt = `${headers}` 
+conn.footerTxt(m.chat, `${capt}`, footer, m)
+          } else if (_menu.footerImg) {
+          conn.footerImg(m.chat, `${headers}`+simp, "", media.furina, m) 
+          
+          } else if (_menu.footerVid) {
+          conn.footerVid(m.chat, headers+simp, "", media.gif, m)
+          
+          } else if (_menu.footerThumbImg) {
+          conn.footerThumbImg(m.chat, headers+simp, "", media.furina, thumb, footer, wm, m)
+          
+} else if (_menu.footerThumbVid) {
+  conn.footerThumbVid(m.chat, headers + simp, "", media.gif, thumb, footer, wm, m);
+
+} else if (_menu.buttonV1) {
+  let msg = generateWAMessageFromContent(m.chat, {
+    interactiveMessage: {
+      header: {
+        documentMessage: {
+          url: 'https://mmg.whatsapp.net/o1/v/t24/f2/m239/AQONdOvBb9HbuoeGLj96Qg8N1n4YQSe_TTv3E7ddHK23QqGgw7GgerOdVQN8x4scNL8h7V5yctrqSWykyUgkmNSTsKGTD_c4CwwSWlKK-Q?ccb=9-4&oh=01_Q5Aa2wHduvQIij5nO066S7u5h7kQsiDVWfPSiQB0aUuwTC34wA&oe=69258771&_nc_sid=e6ed6c&mms3=true',
+          mimetype: "image/png",
+          fileSha256: "+gmvvCB6ckJSuuG3ZOzHsTBgRAukejv1nnfwGSSSS/4=",
+          fileLength: "1435",
+          pageCount: 0,
+          mediaKey: "MWO6fI223TY8T0i9onNcwNBBPldWfwp1j1FPKCiJFzw=",
+          fileName: `${m.name}`,
+          fileEncSha256: "ZS8v9tio2un1yWVOOG3lwBxiP+mNgaKPY9+wl5pEoi8=",
+          directPath: "/o1/v/t24/f2/m239/AQONdOvBb9HbuoeGLj96Qg8N1n4YQSe_TTv3E7ddHK23QqGgw7GgerOdVQN8x4scNL8h7V5yctrqSWykyUgkmNSTsKGTD_c4CwwSWlKK-Q?ccb=9-4&oh=01_Q5Aa2wHduvQIij5nO066S7u5h7kQsiDVWfPSiQB0aUuwTC34wA&oe=69258771&_nc_sid=e6ed6c",
+          mediaKeyTimestamp: "1761479595",
+          jpegThumbnail: base64String
+        },
+        hasMediaAttachment: true
+      },
+      body: { text: headers },
+      footer: { text: "— ᴀᴋᴀ 𝚍𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛" },
+      nativeFlowMessage: {
+        buttons: [
+          {
+            name: "single_select",
+            buttonParamsJson: JSON.stringify({
+              title: "— Information.",
+              sections: [
+                {
+                  title: "# X - the best 🔥",
+                  highlight_label: "",
+                  rows: [
+                    { title: "📃 Source Code", description: "Display this script", id: ".sc" },
+                    { title: "👤 Developer", description: "My Creator", id: ".owner" },
+                    { title: "❤️ Thanks To", description: "Thanks for..", id: ".tqto" },
+                    { title: "⚡ Ping Bot", description: "Ping the bot", id: ".ping" },
+                    { title: "💸 Sewa Bot", description: "Sewa Bot Di Sini", id: ".sewa" }
+                  ]
+                }
+              ],
+              has_multiple_buttons: true
+            })
+          },
+          {
+            name: "single_select",
+            buttonParamsJson: JSON.stringify({
+              title: "— Menulist. ⚡",
+              sections: [
+                {
+                  title: "#Pilih Menu nyaa!",
+                  highlight_label: "",
+                  rows: [...btn],
+                }
+              ],
+              has_multiple_buttons: true
+            })
+          },
+          {
+            name: "cta_url",
+            buttonParamsJson: JSON.stringify({
+              display_text: "Contact to help",
+              url: `https://wa.me/${global.owner}?text=Hai`,
+              merchant_url: "https://akadev.my.id"
+            })
+          }
+        ],
+        messageParamsJson: JSON.stringify({
+          limited_time_offer: {
+            text: "—𝚊𝚔𝚊 𝚍𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛",
+            url: "t.me/@lenatheaxyz",
+            copy_code: "",
+            expiration_time: 1754613436864329
+          },
+          bottom_sheet: {
+            in_thread_buttons_limit: 1,
+            divider_indices: [1, 2, 3, 4, 5, 999],
+            list_title: "",
+            button_title: "Select"
+          },
+          tap_target_configuration: {
+            title: "▸ X ◂",
+            description: "bomboclard",
+            canonical_url: "https://akadev.my.id",
+            domain: "shop.example.com",
+            button_index: 0
+          }
+        })
+      },
+      contextInfo: {
+        mentionedJid: [m.sender],
+        forwardingScore: 777,
+        isForwarded: true,
+        externalAdReply: {
+          title: "— furina Bot | Playground.",
+          body: "Version: 5.0.0",
+          mediaType: 1,
+          thumbnailUrl: thumb,
+          mediaUrl: "",
+          sourceUrl: "https://akadev.my.id",
+          showAdAttribution: false,
+          renderLargerThumbnail: true
+        }
+      }
+    }
+  }, { userJid: m.sender, quoted: m });
+
+  await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
+
+} else if (_menu.buttonV2) {
+  await conn.relayMessage(m.chat, {
+    viewOnceMessage: {
+      message: {
+        messageContextInfo: {
+          deviceListMetadata: {},
+          deviceListMetadataVersion: 2
+        },
+        interactiveMessage: proto.Message.InteractiveMessage.create({
+          body: proto.Message.InteractiveMessage.Body.create({
+            text: headers
+          }),
+          footer: proto.Message.InteractiveMessage.Footer.create({
+            text: wm
+          }),
+          header: proto.Message.InteractiveMessage.Header.create({
+            title: "",
+            subtitle: "",
+            hasMediaAttachment: false,
+            ...await prepareWAMessageMedia({
+              image: { url: thumb }
+            }, { upload: conn.waUploadToServer })
+          }),
+          nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+            buttons: [
+              {
+                name: "single_select",
+                buttonParamsJson: JSON.stringify(datas)
+              },
+              {
+                name: "cta_url",
+                buttonParamsJson: JSON.stringify({
+                  display_text: "📢 Saluran Bot",
+                  url: saluran,
+                  merchant_url: saluran
+                })
+              },
+              {
+                name: "quick_reply",
+                buttonParamsJson: JSON.stringify({
+                  display_text: "💾 Info Script",
+                  id: ".sc"
+                })
+              }
+            ]
+          })
+        })
+      }
+    }
+  }, { quoted: m });
+} else if (_menu.buttonV3) {
+          await conn.sendMessage(m.chat, {
+    video: { url: media.gif },
+    caption: headers,
+    footer: wm,
+    viewOnce: true,
+    buttons: jul,
+    contextInfo: {
+        isForwarded: true,
+        forwardingScore: 999,
+        mentionedJid: [m.sender], 
+        forwardedNewsletterMessageInfo: {
+            newsletterName: wm2,
+            newsletterJid: idsal,
+            serverMessageId: null
+        },
+        externalAdReply: {
+            title: footer,
+            body: wm,
+            sourceUrl: "https://akadev.my.id",
+            thumbnailUrl: thumb
+        }
+    },
+    headerType: 5
+}, { quoted: m });
+        } else if (_menu.buttonV4) {
+await conn.sendMessage(m.chat, { 
+  document: {
+    url: 'https://wa.me/6281266950382'
+  },
+  mimetype: 'image/png', // Ganti jika kamu ingin mimetype lain
+  fileName: `${m.name}`,
+  jpegThumbnail: await conn.resize(pp, 400, 400),
+  fileLength: 10,
+    caption: headers,
+    footer: null,
+    buttons: jul2,
+    viewOnce: true,
+    headerType: 6,
+    contextInfo: {
+        forwardedNewsletterMessageInfo: {
+            newsletterName: wm2,
+            newsletterJid: idsal,
+            serverMessageId: null
+        },
+        externalAdReply: {
+            title: ` [ Hello </> ${m.name} </> ]`,
+            body: null,
+            thumbnailUrl: thumb,
+            sourceUrl: saluran,
+            mediaType: 1,
+            mentionedJid: [m.sender],
+            renderLargerThumbnail: true
+        }
+    }
+}, { quoted: m });
+        }
+await conn.sendMessage(m.chat, {
+    audio: { url : "https://files.catbox.moe/okon0j.opus" },
+    mimetype: 'audio/ogg; codecs=opus',
+    ptt: false,
+    fileName: `y.mp3`,
+    contextInfo: {
+        isForwarded: true,
+        forwardingScore: 999,
+        mentionedJid: [m.sender],
+        forwardedNewsletterMessageInfo: {
+            newsletterName: "furina || Has Created By ᴀᴋᴀ",
+            newsletterJid: idsal,
+            serverMessageId: null
+        },
+        externalAdReply: {
+            title: "—furina | Playground",
+            body: `${m.name}`,
+            mediaType: 1,
+            thumbnailUrl: thumb,
+            sourceUrl: saluran
+        }
+    }
+}, {
+    quoted: {
+        key: {
+            participant: "0@s.whatsapp.net",
+            remoteJid: "status@broadcast"
+        },
+        message: {
+            conversation: `⚡ ${global.namebot} ⚡ A simple Bot`
+        }
+    }
+});
+  } else if (tagCount[cmd]) {
+    const daftarHelp = tagHelpMapping[cmd].map((helpItem, index) => {
+      const premiumSign = help[index].premium ? '🅟' : '';
+      const limitSign = help[index].limit ? 'Ⓛ' : '';
+      return `.${helpItem} ${premiumSign}${limitSign}`;
+    })
+    .sort()
+    .join('\n - '  + ' ');
+        let more = String.fromCharCode(8206)
+        let readMore = more.repeat(4001)
+        
+    const list2 =  await style(`${info}${readMore}\n\n-─── 「 *${kyZ()} MENU ${cmd.toUpperCase()} ${kyZ()}* 」 ───-\n - ${daftarHelp}\n-────────────────────-\n\n> • *Total Menu ${cmd}: ${tagHelpMapping[cmd].length}* ✨`, 1
+)
+    const pp = await conn.profilePictureUrl(m.sender, 'image').catch((_) => "https://telegra.ph/file/1ecdb5a0aee62ef17d7fc.jpg");
+     
+if (_menu.image) {
+conn.sendMessage(m.chat, {
+      text: list2,
+      contextInfo: { mentionedJid: [m.sender], 
+            externalAdReply: {
+            title: footer, 
+            body: wm, 
+            thumbnailUrl: media.furina, 
+            renderLargerThumbnail: true, 
+            }, 
+      }}, {quoted: m})
+      
+      } else if (_menu.gif) {
+conn.sendMessage(m.chat, {
+      video: {url: 'https://telegra.ph/file/3586d0daf888a60520e1f.mp4'},
+      gifPlayback: true,
+      caption: list2,
+      contextInfo: { mentionedJid: [m.sender], 
+            externalAdReply: {
+            title: footer, 
+            body: wm, 
+            thumbnailUrl: media.furina, 
+            renderLargerThumbnail: true, 
+            }, 
+      }}, {quoted: m})
+
+} else if (_menu.teks) {
+conn.reply(m.chat, list2, m)
+
+} else if (_menu.doc) {
+conn.sendMessage(m.chat, {
+            document: fs.readFileSync("./package.json"),
+            fileName: namebot,
+            fileLength: new Date(),
+            pageCount: "2024",
+            jpegThumbnail: await conn.resize((await conn.getFile(docUrl)).data, 180, 72),
+            caption: list2,
+            contextInfo: { mentionedJid: [m.sender], 
+            externalAdReply: {
+            title: footer, 
+            body: wm, 
+            thumbnailUrl: media.furina, 
+            renderLargerThumbnail: true, 
+            }, 
+            }, 
+          }, {quoted: m});
+          
+          } else if (_menu.footer) {
+conn.footerTxt(m.chat, list2, footer, m)
+
+          } else if (_menu.footerImg) {
+conn.footerImg(m.chat, list2, footer, media.furina, m)
+
+          } else if (_menu.footerVid) {
+conn.footerVid(m.chat, list2, footer, media.gif, m)
+
+          } else if (_menu.footerThumbImg) {
+conn.footerThumbImg(m.chat, list2, "", media.furina, thumb, footer, wm, m)
+
+          } else if (_menu.footerThumbVid) {
+conn.footerThumbVid(m.chat, list2, "", media.gif, thumb, footer, wm, m)
+
+} else if (_menu.buttonV1) {
+  let msg = generateWAMessageFromContent(m.chat, {
+    interactiveMessage: {
+      header: {
+        documentMessage: {
+          url: 'https://mmg.whatsapp.net/o1/v/t24/f2/m239/AQONdOvBb9HbuoeGLj96Qg8N1n4YQSe_TTv3E7ddHK23QqGgw7GgerOdVQN8x4scNL8h7V5yctrqSWykyUgkmNSTsKGTD_c4CwwSWlKK-Q?ccb=9-4&oh=01_Q5Aa2wHduvQIij5nO066S7u5h7kQsiDVWfPSiQB0aUuwTC34wA&oe=69258771&_nc_sid=e6ed6c&mms3=true',
+          mimetype: "image/png",
+          fileSha256: "+gmvvCB6ckJSuuG3ZOzHsTBgRAukejv1nnfwGSSSS/4=",
+          fileLength: "1435",
+          pageCount: 0,
+          mediaKey: "MWO6fI223TY8T0i9onNcwNBBPldWfwp1j1FPKCiJFzw=",
+          fileName: `${m.name}`,
+          fileEncSha256: "ZS8v9tio2un1yWVOOG3lwBxiP+mNgaKPY9+wl5pEoi8=",
+          directPath: "/o1/v/t24/f2/m239/AQONdOvBb9HbuoeGLj96Qg8N1n4YQSe_TTv3E7ddHK23QqGgw7GgerOdVQN8x4scNL8h7V5yctrqSWykyUgkmNSTsKGTD_c4CwwSWlKK-Q?ccb=9-4&oh=01_Q5Aa2wHduvQIij5nO066S7u5h7kQsiDVWfPSiQB0aUuwTC34wA&oe=69258771&_nc_sid=e6ed6c",
+          mediaKeyTimestamp: "1761479595",
+          jpegThumbnail: base64String 
+        },
+        hasMediaAttachment: true
+      },
+      body: { text: list2 },
+      footer: { text: "— ᴀᴋᴀ 𝚍𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛" },
+      nativeFlowMessage: {
+        buttons: [
+          {
+            name: "single_select",
+            buttonParamsJson: JSON.stringify({
+              title: "— Information.",
+              sections: [
+                {
+                  title: "# X - the best 🔥",
+                  highlight_label: "",
+                  rows: [
+                    { title: "📃 Source Code", description: "Display this script", id: ".sc" },
+                    { title: "👤 Developer", description: "My Creator", id: ".owner" },
+                    { title: "❤️ Thanks To", description: "Thanks for..", id: ".tqto" },
+                    { title: "⚡ Ping Bot", description: "Ping the bot", id: ".ping" },
+                    { title: "💸 Sewa Bot", description: "Sewa Bot Di Sini", id: ".sewa" }
+                  ]
+                }
+              ],
+              has_multiple_buttons: true
+            })
+          },
+          {
+            name: "single_select",
+            buttonParamsJson: JSON.stringify({
+              title: "— Menulist. ⚡",
+              sections: [
+                {
+                  title: "#Pilih Menu nyaa!",
+                  highlight_label: "",
+                  rows: [...btn],
+                }
+              ],
+              has_multiple_buttons: true
+            })
+          },
+          {
+            name: "cta_url",
+            buttonParamsJson: JSON.stringify({
+              display_text: "Contact to help",
+              url: `https://wa.me/${global.owner}?text=Hai`,
+              merchant_url: "https://akadev.my.id"
+            })
+          }
+        ],
+        messageParamsJson: JSON.stringify({
+          limited_time_offer: {
+            text: "—𝚊𝚔𝚊 𝚍𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛",
+            url: "t.me/@lenatheaxyz",
+            copy_code: "",
+            expiration_time: 1754613436864329
+          },
+          bottom_sheet: {
+            in_thread_buttons_limit: 1,
+            divider_indices: [1, 2, 3, 4, 5, 999],
+            list_title: "",
+            button_title: "Select"
+          },
+          tap_target_configuration: {
+            title: "▸ X ◂",
+            description: "bomboclard",
+            canonical_url: "https://akadev.my.id",
+            domain: "shop.example.com",
+            button_index: 0
+          }
+        })
+      },
+      contextInfo: {
+        mentionedJid: [m.sender],
+        forwardingScore: 777,
+        isForwarded: true,
+        externalAdReply: {
+          title: "— furina Bot | Playground.",
+          body: "Version: 5.0.0",
+          mediaType: 1,
+          thumbnailUrl: thumb,
+          mediaUrl: "",
+          sourceUrl: "https://akadev.my.id",
+          showAdAttribution: false,
+          renderLargerThumbnail: true
+        }
+      }
+    }
+  }, { userJid: m.sender, quoted: m });
+
+  await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
+
+} else if (_menu.buttonV2) {
+await conn.relayMessage(m.chat, {
+  viewOnceMessage: {
+    message: {
+      messageContextInfo: {
+        deviceListMetadata: {},
+        deviceListMetadataVersion: 2
+      },
+      interactiveMessage: proto.Message.InteractiveMessage.create({
+        body: proto.Message.InteractiveMessage.Body.create({
+          text: list2
+        }),
+        footer: proto.Message.InteractiveMessage.Footer.create({
+          text: wm
+        }),
+        header: proto.Message.InteractiveMessage.Header.create({
+          title: "",
+          subtitle: "",
+          hasMediaAttachment: false,
+          ...await prepareWAMessageMedia({
+            image: { url: thumb }
+          }, { upload: conn.waUploadToServer })
+        }),
+        nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+          buttons: [
+            {
+              name: "single_select",
+              buttonParamsJson: JSON.stringify(datas)
+            },
+            {
+              name: "cta_url",
+              buttonParamsJson: JSON.stringify({
+                display_text: "📢 Saluran Bot",
+                url: saluran,
+                merchant_url: saluran
+              })
+            },
+            {
+              name: "quick_reply",
+              buttonParamsJson: JSON.stringify({
+                display_text: "💾 Info Script",
+                id: ".sc"
+              })
+            }
+          ]
+        })
+      })
+    }
+  }
+}, { quoted: m });
+          } else if (_menu.buttonV3) {
+          await conn.sendMessage(m.chat, {
+        video: { url: media.gif },
+        caption: list2,
+        footer: wm,
+        viewOnce: true,
+        buttons: jul,
+        contextInfo: {
+        isForwarded: true, 
+        forwardingScore: 999,
+        mentionedJid: [m.sender], 
+        forwardedNewsletterMessageInfo: { newsletterName: wm2, newsletterJid: idsal, serverMessageId: null }, 
+        externalAdReply: {
+        title: footer, 
+        body: wm, 
+        sourceUrl: "https://akadev.my.id", 
+        thumbnailUrl: thumb
+        }, 
+        }, 
+        headerType: 4 
+    }, { quoted: m });
+        } else if (_menu.buttonV4) {
+await conn.sendMessage(m.chat, {
+  document: {
+    url: 'https://wa.me/6281266950382'
+  },
+  mimetype: 'image/png', // Ganti jika kamu ingin mimetype lain
+  fileName: `${m.name}`,
+  jpegThumbnail: await conn.resize(pp, 400, 400),
+  fileLength: 10,
+    caption: list2,
+    footer: null,
+    buttons: jul2,
+    viewOnce: true,
+    headerType: 6,
+    contextInfo: {
+        forwardedNewsletterMessageInfo: {
+            newsletterName: wm2,
+            newsletterJid: idsal,
+            serverMessageId: null
+        },
+        externalAdReply: {
+            title: ` [ Hello </> ${m.name} </> ]`,
+            body: null,
+            thumbnailUrl: thumb,
+            sourceUrl: saluran,
+            mediaType: 1,
+            mentionedJid: [m.sender],
+            renderLargerThumbnail: true
+        }
+    }
+}, { quoted: m });
+        }
+        } else if (cmd === 'all' || command === 'allmenu') {
+    let name = m.pushName || conn.getName(m.sender)
+    const pp = await conn.profilePictureUrl(m.sender, 'image').catch((_) => "https://telegra.ph/file/bf29252842366db5ae047.jpg");
+    
+          const more = String.fromCharCode(8206)
+          const readMore = more.repeat(4001)
+          const allTagsAndHelp = Object.keys(tagCount).map(tag => {
+         const daftarHelp = tagHelpMapping[tag].map((helpItem, index) => {
+        const premiumSign = help[index].premium ? '🅟' : '';
+        const limitSign = help[index].limit ? 'Ⓛ' : '';
+        return ` .${helpItem} ${premiumSign}${limitSign}`;
+      })
+      .sort()
+      .join('\n -' + ' ');
+      return `\n-─── 「 *${kyZ()} MENU ${tag} ${kyZ()}* 」 ───-\n - ${daftarHelp}\n-────────────────────-\n`
+    })
+    .sort()
+    .join('\n');
+    let all =  await style(`${info}\n${readMore}${allTagsAndHelp}\n> ✨ *Semoga Anda Puas Dengan Fitur Yang Kami Sediakan* ✨`, 1) 
+    
+    if (_menu.image) {
+conn.sendMessage(m.chat, {
+      text: all,
+      contextInfo: { mentionedJid: [m.sender], 
+            externalAdReply: {
+            title: footer, 
+            body: wm, 
+            thumbnailUrl: media.furina, 
+            renderLargerThumbnail: true, 
+            }, 
+      }}, {quoted: m})
+      
+      } else if (_menu.gif) {
+conn.sendMessage(m.chat, {
+      video: {url: 'https://telegra.ph/file/3586d0daf888a60520e1f.mp4'},
+      gifPlayback: true,
+      caption: all,
+      contextInfo: { mentionedJid: [m.sender], 
+            externalAdReply: {
+            title: footer, 
+            body: wm, 
+            thumbnailUrl: media.furina, 
+            renderLargerThumbnail: true, 
+            }
+      }}, {quoted: m})
+
+} else if (_menu.teks) {
+conn.reply(m.chat, all, m)
+
+} else if (_menu.doc) {
+conn.sendMessage(m.chat, {
+            document: fs.readFileSync("./package.json"),
+            fileName: namebot,
+            fileLength: new Date(),
+            pageCount: "2024",
+            caption: all,
+            jpegThumbnail: await conn.resize((await conn.getFile(docUrl)).data, 180, 72),
+            contextInfo: { mentionedJid: [m.sender], 
+            externalAdReply: {
+            title: footer, 
+            body: wm, 
+            thumbnailUrl: media.furina, 
+            renderLargerThumbnail: true, 
+            }, 
+           }
+          }, {quoted: m});
+          
+          } else if (_menu.footer) {
+conn.footerTxt(m.chat, all, footer, m)
+
+          } else if (_menu.footerImg) {
+conn.footerImg(m.chat, all, footer, media.furina, m)
+
+          } else if (_menu.footerVid) {
+conn.footerVid(m.chat, all, footer, media.gif, m)
+
+          } else if (_menu.footerThumbImg) {
+conn.footerThumbImg(m.chat, all, "", media.furina, thumb, footer, wm, m)
+
+          } else if (_menu.footerThumbVid) {
+conn.footerThumbVid(m.chat, "\n────< ғᴜʀɪɴᴀ - ᴀsɪssᴛᴀɴᴛ>────\n\n"+all, "", media.gif, thumb, footer, wm, m)
+
+} else if (_menu.buttonV1) {
+  let msg = generateWAMessageFromContent(m.chat, {
+    interactiveMessage: {
+      header: {
+        documentMessage: {
+          url: 'https://mmg.whatsapp.net/o1/v/t24/f2/m239/AQONdOvBb9HbuoeGLj96Qg8N1n4YQSe_TTv3E7ddHK23QqGgw7GgerOdVQN8x4scNL8h7V5yctrqSWykyUgkmNSTsKGTD_c4CwwSWlKK-Q?ccb=9-4&oh=01_Q5Aa2wHduvQIij5nO066S7u5h7kQsiDVWfPSiQB0aUuwTC34wA&oe=69258771&_nc_sid=e6ed6c&mms3=true',
+          mimetype: "image/png",
+          fileSha256: "+gmvvCB6ckJSuuG3ZOzHsTBgRAukejv1nnfwGSSSS/4=",
+          fileLength: "1435",
+          pageCount: 0,
+          mediaKey: "MWO6fI223TY8T0i9onNcwNBBPldWfwp1j1FPKCiJFzw=",
+          fileName: `${m.name}`,
+          fileEncSha256: "ZS8v9tio2un1yWVOOG3lwBxiP+mNgaKPY9+wl5pEoi8=",
+          directPath: "/o1/v/t24/f2/m239/AQONdOvBb9HbuoeGLj96Qg8N1n4YQSe_TTv3E7ddHK23QqGgw7GgerOdVQN8x4scNL8h7V5yctrqSWykyUgkmNSTsKGTD_c4CwwSWlKK-Q?ccb=9-4&oh=01_Q5Aa2wHduvQIij5nO066S7u5h7kQsiDVWfPSiQB0aUuwTC34wA&oe=69258771&_nc_sid=e6ed6c",
+          mediaKeyTimestamp: "1761479595",
+          jpegThumbnail: base64String
+        },
+        hasMediaAttachment: true
+      },
+      body: { text: all },
+      footer: { text: "— ᴀᴋᴀ 𝚍𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛" },
+      nativeFlowMessage: {
+        buttons: [
+          {
+            name: "single_select",
+            buttonParamsJson: JSON.stringify({
+              title: "— Information.",
+              sections: [
+                {
+                  title: "# X - the best 🔥",
+                  highlight_label: "",
+                  rows: [
+                    { title: "📃 Source Code", description: "Display this script", id: ".sc" },
+                    { title: "👤 Developer", description: "My Creator", id: ".owner" },
+                    { title: "❤️ Thanks To", description: "Thanks for..", id: ".tqto" },
+                    { title: "⚡ Ping Bot", description: "Ping the bot", id: ".ping" },
+                    { title: "💸 Sewa Bot", description: "Sewa Bot Di Sini", id: ".sewa" }
+                  ]
+                }
+              ],
+              has_multiple_buttons: true
+            })
+          },
+          {
+            name: "single_select",
+            buttonParamsJson: JSON.stringify({
+              title: "— Menulist. ⚡",
+              sections: [
+                {
+                  title: "#Pilih Menu nyaa!",
+                  highlight_label: "",
+                  rows: [...btn],
+                }
+              ],
+              has_multiple_buttons: true
+            })
+          },
+          {
+            name: "cta_url",
+            buttonParamsJson: JSON.stringify({
+              display_text: "Contact to help",
+              url: `https://wa.me/${global.owner}?text=Hai`,
+              merchant_url: "https://akadev.my.id"
+            })
+          }
+        ],
+        messageParamsJson: JSON.stringify({
+          limited_time_offer: {
+            text: "—𝚊𝚔𝚊 𝚍𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛",
+            url: "t.me/@lenatheaxyz",
+            copy_code: "",
+            expiration_time: 1754613436864329
+          },
+          bottom_sheet: {
+            in_thread_buttons_limit: 1,
+            divider_indices: [1, 2, 3, 4, 5, 999],
+            list_title: "",
+            button_title: "Select"
+          },
+          tap_target_configuration: {
+            title: "▸ X ◂",
+            description: "bomboclard",
+            canonical_url: "https://akadev.my.id",
+            domain: "shop.example.com",
+            button_index: 0
+          }
+        })
+      },
+      contextInfo: {
+        mentionedJid: [m.sender],
+        forwardingScore: 777,
+        isForwarded: true,
+        externalAdReply: {
+          title: "— furina Bot | Playground.",
+          body: "Version: 5.0.0",
+          mediaType: 1,
+          thumbnailUrl: thumb,
+          mediaUrl: "",
+          sourceUrl: "https://akadev.my.id",
+          showAdAttribution: false,
+          renderLargerThumbnail: true
+        }
+      }
+    }
+  }, { userJid: m.sender, quoted: m });
+
+  await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
+
+} else if (_menu.buttonV2) {
+await conn.relayMessage(m.chat, {
+  viewOnceMessage: {
+    message: {
+      messageContextInfo: {
+        deviceListMetadata: {},
+        deviceListMetadataVersion: 2
+      },
+      interactiveMessage: proto.Message.InteractiveMessage.create({
+        body: proto.Message.InteractiveMessage.Body.create({
+          text: all
+        }),
+        footer: proto.Message.InteractiveMessage.Footer.create({
+          text: wm
+        }),
+        header: proto.Message.InteractiveMessage.Header.create({
+          title: "",
+          subtitle: "",
+          hasMediaAttachment: false,
+          ...await prepareWAMessageMedia({
+            image: { url: thumb }
+          }, { upload: conn.waUploadToServer })
+        }),
+        nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+          buttons: [
+            {
+              name: "single_select",
+              buttonParamsJson: JSON.stringify(datas)
+            },
+            {
+              name: "cta_url",
+              buttonParamsJson: JSON.stringify({
+                display_text: "📢 Saluran Bot",
+                url: saluran,
+                merchant_url: saluran
+              })
+            },
+            {
+              name: "quick_reply",
+              buttonParamsJson: JSON.stringify({
+                display_text: "💾 Info Script",
+                id: ".sc"
+              })
+            }
+          ]
+        })
+      })
+    }
+  }
+}, { quoted: m });
+          } else if (_menu.buttonV3) {
+          await conn.sendMessage(m.chat, {
+        video: { url: media.gif },
+        caption: all,
+        footer: wm,
+        viewOnce: true,
+        buttons: jul,
+        contextInfo: {
+        isForwarded: true, 
+        forwardingScore: 999,
+        mentionedJid: [m.sender], 
+        forwardedNewsletterMessageInfo: { newsletterName: wm2, newsletterJid: idsal, serverMessageId: null }, 
+        externalAdReply: {
+        title: footer, 
+        body: wm, 
+        sourceUrl: "https://akadev.my.id", 
+        thumbnailUrl: thumb
+        }, 
+        }, 
+        headerType: 4 
+    }, { quoted: m });
+        } else if (_menu.buttonV4) {
+await conn.sendMessage(m.chat, {
+  document: {
+    url: 'https://wa.me/6281266950382'
+  },
+  mimetype: 'image/png', // Ganti jika kamu ingin mimetype lain
+  fileName: `${m.name}`,
+  fileLength: 10,
+    caption: all,
+    footer: null,
+    buttons: jul2,
+    viewOnce: true,
+    headerType: 6,
+    contextInfo: {
+        forwardedNewsletterMessageInfo: {
+            newsletterName: wm2,
+            newsletterJid: idsal,
+            serverMessageId: null
+        },
+        externalAdReply: {
+            title: ` [ Hello </> ${m.name} </> ]`,
+            body: null,
+            thumbnailUrl: thumb,
+            sourceUrl: saluran,
+            mediaType: 1,
+            mentionedJid: [m.sender],
+            renderLargerThumbnail: true
+        }
+    }
+}, { quoted: m });
+        } else {
+  await conn.reply(m.chat, `Mᴇɴᴜ '${cmd}' ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴅɪᴛᴇᴍᴜᴋᴀɴ. ɢᴜɴᴀᴋᴀɴ ᴘᴇʀɪɴᴛᴀʜ '${command}' ᴀᴛᴀᴜ '${command} all' ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴍᴇɴᴜ ʏᴀɴɢ ᴛᴇʀsᴇᴅɪᴀ.`,m);
+  }
+     await conn.sendMessage(m.chat, { react: { text: `✅`, key: m.key }});
+    }
+}
+handler.help = ['menu']
+handler.tags = ['main']
+handler.command = ['menu', 'k']
+export default handler
+
+//----------- FUNCTION -------
+
+function pickRandom(list) {
+  return list[Math.floor(Math.random() * list.length)]
+}
+
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
+
+function clockString(ms) {
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+  return [h, ' H ', m, ' M ', s, ' S '].map(v => v.toString().padStart(2, 0)).join('')
+}
+function clockStringP(ms) {
+  let ye = isNaN(ms) ? '--' : Math.floor(ms / 31104000000) % 10
+  let mo = isNaN(ms) ? '--' : Math.floor(ms / 2592000000) % 12
+  let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000) % 30
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
+  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+  return [ye, ' *Years 🗓️*\n',  mo, ' *Month 🌙*\n', d, ' *Days ☀️*\n', h, ' *Hours 🕐*\n', m, ' *Minute ⏰*\n', s, ' *Second ⏱️*'].map(v => v.toString().padStart(2, 0)).join('')
+}
+function kyZ() {
+  const time = moment.tz('Asia/Jakarta').format('HH')
+  let res = "🪐"
+  if (time >= 4) {
+    res = "🌤"
+  }
+  if (time >= 10) {
+    res = "☀"
+  }
+  if (time >= 15) {
+    res = "🌥"
+  }
+  if (time >= 18) {
+    res = "🌙"
+  }
+  return res
+}
+
+async function getIndonesianHolidays(year) {
+    return [
+        { name: "Tahun Baru Masehi", date: new Date(year, 0, 1) },
+        { name: "Hari Raya Nyepi", date: new Date(year, 2, 22) },
+        { name: "Hari Buruh Internasional", date: new Date(year, 4, 1) },
+        { name: "Hari Raya Waisak", date: new Date(year, 4, 22) },
+        { name: "Hari Raya Idul Fitri", date: new Date(year, 3, 21) },
+        { name: "Hari Raya Idul Adha", date: new Date(year, 5, 6) }, 
+        { name: "Hari Kemerdekaan RI", date: new Date(year, 7, 17) },
+        { name: "Hari Raya Natal", date: new Date(year, 11, 25) }
+    ];
+}
+
+async function countdownTo(date) {
+    const now = new Date();
+    now.setHours(now.getHours() + 7);
+    const diff = date - now;
+    if (diff <= 0) return `telah berlalu.`;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    return `${days} hari lagi`;
+}
+
+async function displayNextHoliday() {
+    const year = new Date().getFullYear();
+    const holidays = await getIndonesianHolidays(year);
+    const now = new Date();
+    now.setHours(now.getHours() + 7);
+    const upcomingHoliday = holidays.find(holiday => holiday.date > now);
+
+    if (upcomingHoliday) {
+        return `${upcomingHoliday.name}\n dalam: ${await countdownTo(upcomingHoliday.date)}`;
+    } else {
+        const nextYearHolidays = await getIndonesianHolidays(year + 1);
+        return `${nextYearHolidays[0].name}\n dalam ${await countdownTo(nextYearHolidays[0].date)}`;
+    }
+}
+
+async function displayCountdowns() {
+    const now = new Date();
+    const year = new Date().getFullYear();
+    const holidays = await getIndonesianHolidays(year);
+    let countdownMessages = [];
+
+    for (const holiday of holidays) {
+        if (holiday.date < now) {
+            holiday.date.setFullYear(holiday.date.getFullYear() + 1);
+        }
+        countdownMessages.push(`${holiday.name} = ${await countdownTo(holiday.date)}`);
+    }
+
+    const nextBirthday = new Date(now.getFullYear(), 10, 26);
+    if (now > nextBirthday) nextBirthday.setFullYear(now.getFullYear() + 1);
+    countdownMessages.push(`*Ulang Tahun Creator* = ${await countdownTo(nextBirthday)}`);
+
+    return countdownMessages.join("\n");
+}
